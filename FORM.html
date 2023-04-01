@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULÁRIOS</title>
+</head>
+<body>
+    <h1>Exemplos de formulários sem INPUT</h1>
+
+    <form action="cadastro.php" method="get" autocomplete="on">
+        
+        <p>
+            <label for="iest">Estado</label>
+            <select name="estado" id="iest">
+                <option value="" selected>---- Escolha ----</option>
+                <optgroup label="Região Sudeste">
+                    <option value="SP">1 São Paulo</option>
+                    <option value="RS">1 Rio Grande do Sul</option>
+                    <option value="MG">1 Minas Gerais</option>
+                    <option value="AM">1 Amazonas</option>
+                </optgroup>
+                <optgroup label="Região Nordeste">
+                    <option value="SP">2 São Paulo</option>
+                    <option value="RS">2 Rio Grande do Sul</option>
+                    <option value="MG">2 Minas Gerais</option>
+                    <option value="AM">2 Amazonas</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="iprof">Profissão</label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                    <option value="SP">2 São Paulo</option>
+                    <option value="RS">3 Rio Grande do Sul</option>
+                    <option value="MG">3 Minas Gerais</option>
+                    <option>3 Amazonas</option>
+                    <!--Se tirar o VALUE ele coloca só o que está normal-->
+            </datalist>
+        </p>
+        
+        <p>
+            <label for="imsg">Mensagem</label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Sua mensagem..."></textarea>
+        </p>
+        <!--Quando colocar o TEXTAREA UTILIZAR O METHOD POST por causa da limitação de letras-->
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+    </form>
+</body>
+</html>
